@@ -9,31 +9,55 @@ var ProjectPage = function(options){
   this.copy = options.copy;
   this.nextLink = options.nextLink;
   this.webLink = options.webLink;
-  this.image = options.image;
+  this.images = options.images;
 };
-
-// SummerSays
-var summer = new ProjectPage({
-  title: 'Summer Says',
-  copy: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  nextLink: 'sms.html',
-  webLink: 'http://dev.summersays.com',
-  image: 'images/ss-home.jpg'
-});
-
-// ConcreteCanvas
-var concrete = new ProjectPage({
-  title: 'Concrete Canvas',
-  copy: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  nextLink: 'sms.html',
-  webLink: 'http://dev.summersays.com',
-  image: 'images/ss-home.jpg'
-});
-
-// Create page
-// $('.container-individual').html(renderProjectTemp(summer));
 
 // Build project page on click
 $('#concrete').click(function(){
     $('.dynamic').html(renderProjectTemp(concrete));
+});
+$('#email').click(function(){
+    $('.dynamic').html(renderProjectTemp(email));
+});
+$('#ucp').click(function(){
+    $('.dynamic').html(renderProjectTemp(ucp));
+});
+$('#shred').click(function(){
+    $('.dynamic').html(renderProjectTemp(shred));
+});
+$('#summer').click(function(){
+    $('.dynamic').html(renderProjectTemp(summer));
+});
+$('#sms').click(function(){
+    $('.dynamic').html(renderProjectTemp(sms));
+});
+$('#ebm').click(function(){
+    $('.dynamic').html(renderProjectTemp(ebm));
+});
+
+// Projects
+
+// ConcreteCanvas
+var concrete = new ProjectPage({
+  title: 'Concrete Canvas',
+  copy: "Concrete Canvas is a skateboard shop located in Auburn, Alabama, a town with a large population of skateboarders who are currently forced to purchase products online or from neighboring cities. This shop prides itself on emphasizing skateboarding as an art rather than a sport, viewing the activity as a creative interpretation of one’s surrounding landscape in a physical manner. Contemporary skate shops have taken the role as a community center and headquarters for local skateboarders; while maintaining the function of providing necessary products for skateboarding, shops also carry the responsibility of promoting the local skate scene. Concrete Canvas is an operation run purely for skateboarders by skateboarders. We intend to create unity in a scattered skateboarding scene by emphasizing key values in the community. The aesthetic of Concrete Canvas is based on the contrast between the vibrant and energetic appeal of skateboarding and the stony, urban environment that skateboarders thrive in. Finding the creative potential in overlooked or abandoned architectural structures is skateboarding’s highest calling, and this theme is presented outright in Concrete Canvas’s color scheme: radiating orange, yellow, and red emerging from fields of rigid gray.",
+  nextLink: 'email',
+  images: ['images/cc-boards.jpg', 'images/cc-boxes1.jpg', 'images/cc-boxes2.jpg', 'images/cc-bags.jpg', 'images/cc-all.jpg']
+});
+
+// Email
+var email = new ProjectPage({
+  title: 'BAM! Emails',
+  copy: "A large part of my job at BAM is designing and coding emails. These email blasts were created for a variety of purposes, including promoting events, advertising products, and announcing sales.",
+  nextLink: 'ucp',
+  images: ['images/email-armed.jpg', 'images/email-armed2.jpg','images/email-summer.jpg','images/email-summer2.jpg','images/email-flash.jpg','images/email-flash2.jpg', ]
+});
+
+// SummerSays
+var summer = new ProjectPage({
+  title: 'Summer Says',
+  copy: "Summer Anderson, Books-A-Million's top trendspotter, wanted to revamp her online presence and transform her site into a more image-oriented, blog-inspired destination for fashion and literature enthusiasts. To do this, I designed and developed a custom Wordpress theme that included a simple Pinterest-like masonry layout, infinite scroll, and Instagram integration that not only helped Summer's finds take center stage but made it possible for her to generate content on the fly with ease.",
+  nextLink: 'sms',
+  webLink: 'http://dev.summersays.com',
+  images: ['images/ss-home.jpg']
 });

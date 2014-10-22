@@ -49,6 +49,9 @@
   </div>
   <div id="projects" class="work-container">
     <div class="container">
+
+      <!-- Dyanmic container -->
+      <span class="dynamic">
       <ul class="work-header">
         <li class="column-1">
         <h2 class="title">My Work</h2>
@@ -58,11 +61,8 @@
         </li>
       </ul>
       <div class="clear"></div>
-
-      <!-- Dyanmic container -->
-      <span class="dynamic">
       <ul class="work">
-          <a id="concrete">
+          <a href="#projects" id="concrete">
             <li>
               <div class="work-title">
                 <h4> Concrete Canvas </h4>
@@ -70,7 +70,7 @@
               <img src="images/thumb-cc.jpg" />
             </li>
           </a>
-          <a href="email.html">
+          <a href="#projects" id="email">
             <li>
               <div class="work-title">
                 <h4> BAM! Email Blasts </h4>
@@ -175,10 +175,12 @@
       <% if (webLink != undefined){ %>
       <a class="textlink" href="<%= webLink %>">Visit Website</a>
       <% }; %>
-      <a class="textlink" href="<%= nextLink %>">Next Project<i class="fi-arrow-right"></i></a>
+      <a href="#projects" id="<%= nextLink %>" class="textlink">Next Project<i class="fi-arrow-right"></i></a>
     </li>
     <li class="golden-large images-individual">
-      <img src="<%= image %>"/>
+      <% _.each(images, function(x){ %>
+        <img src="<%= x %>"/>
+      <% }); %>
     </li>
   </ul>
 </script>
