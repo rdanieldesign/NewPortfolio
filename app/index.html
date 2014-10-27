@@ -166,33 +166,16 @@
     </ul>
   </div>
 
-<!-- Project Template -->
-<script id="projectTemp">
-  <ul class="container-individual">
-    <li class="golden-small project-description">
-      <h2 class="title-individual"><%= title %></h2>
-      <p><%= copy %></p>
-      <% if (webLink != undefined){ %>
-      <a class="textlink" href="<%= webLink %>">Visit Website</a>
-      <% }; %>
-      <a href="#projects" id="<%= nextLink %>" class="textlink">Next Project<i class="fi-arrow-right"></i></a>
-    </li>
-    <li class="golden-large images-individual">
-      <% _.each(images, function(x){ %>
-        <img src="<%= x %>"/>
-      <% }); %>
-    </li>
-  </ul>
-</script>
-
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script src="../bower_components/underscore/underscore.js"></script>
+<script src="../bower_components/handlebars/handlebars.runtime.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/render.js"></script>
     <script src="scripts/template.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

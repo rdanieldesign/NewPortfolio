@@ -1,0 +1,15 @@
+<ul class="container-individual">
+  <li class="golden-small project-description">
+    <h2 class="title-individual">{{ title }}</h2>
+    <p>{{ copy }}</p>
+    {{#if weblink}}
+    <a class="textlink" href="{{ webLink }}">Visit Website</a>
+    {{/if}}
+    <a href="#projects" id="{{ nextLink }}" class="textlink">Next Project<i class="fi-arrow-right"></i></a>
+  </li>
+  <li class="golden-large images-individual">
+    {{#each images}}
+      <img src="{{ this }}"/>
+    {{/each}}
+  </li>
+</ul>

@@ -1,10 +1,9 @@
 // Template variables
-var projectTemp = $('#projectTemp').html();
-var renderProjectTemp = _.template(projectTemp);
+var renderProjectTemp = Handlebars.templates['projects'];
 
 // Page template
 var ProjectPage = function(options){
-  var options = options || {};
+  options = options || {};
   this.title = options.title;
   this.copy = options.copy;
   this.nextLink = options.nextLink;
@@ -13,25 +12,25 @@ var ProjectPage = function(options){
 };
 
 // Build project page on click
-$('#concrete').click(function(){
+$('.dynamic').on('click', '#concrete', function(){
     $('.dynamic').html(renderProjectTemp(concrete));
 });
-$('#email').click(function(){
+$('.dynamic').on('click', '#email', function(){
     $('.dynamic').html(renderProjectTemp(email));
 });
-$('#ucp').click(function(){
+$('.dynamic').on('click', '#ucp', function(){
     $('.dynamic').html(renderProjectTemp(ucp));
 });
-$('#shred').click(function(){
+$('.dynamic').on('click', '#shred', function(){
     $('.dynamic').html(renderProjectTemp(shred));
 });
-$('#summer').click(function(){
+$('.dynamic').on('click', '#summer', function(){
     $('.dynamic').html(renderProjectTemp(summer));
 });
-$('#sms').click(function(){
+$('.dynamic').on('click', '#sms', function(){
     $('.dynamic').html(renderProjectTemp(sms));
 });
-$('#ebm').click(function(){
+$('.dynamic').on('click', '#ebm', function(){
     $('.dynamic').html(renderProjectTemp(ebm));
 });
 
