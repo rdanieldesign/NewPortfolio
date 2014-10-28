@@ -16,7 +16,7 @@ templates['projects'] = template({"1":function(depth0,helpers,partials,data) {
     + "</h2>\n    <p>"
     + escapeExpression(((helper = (helper = helpers.copy || (depth0 != null ? depth0.copy : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"copy","hash":{},"data":data}) : helper)))
     + "</p>\n";
-  stack1 = helpers['if'].call(depth0, (depth0 != null ? depth0.weblink : depth0), {"name":"if","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
+  stack1 = helpers['if'].call(depth0, (depth0 != null ? depth0.webLink : depth0), {"name":"if","hash":{},"fn":this.program(1, data),"inverse":this.noop,"data":data});
   if (stack1 != null) { buffer += stack1; }
   buffer += "    <a href=\"#projects\" id=\""
     + escapeExpression(((helper = (helper = helpers.nextLink || (depth0 != null ? depth0.nextLink : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"nextLink","hash":{},"data":data}) : helper)))
